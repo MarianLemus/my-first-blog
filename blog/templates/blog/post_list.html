@@ -1,22 +1,28 @@
 <html>
         <head>
-            <title>Django Girls blog</title>
+            <title>Tierra en peligro</title>
         </head>
         <body>
             <div>
-                <h1><a href="">Django Girls Blog</a></h1>
+                <h1><a href="">TIERRA EN PELIGRO</a></h1>
             </div>
 
             <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">My first post</a></h2>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
+              {% for post in posts %}
+        <div>
+            <p>Fecha: {{ post.0.0 }}</p>
+            <p>Nombre asteroide: {{ post.0.1 }}</p>
+            <p>Diametro máximo: {{post.0.2}}KM</p>
+            <p>Diametro mínimo: {{post.0.3}}KM</p>
+            <p>URL de datos: {{post.0.4}}</p>
+            <p>Potencialmente peligroso?: {{post.0.5}}</p>
 
+            <p>  </p>
+        </div>
+    {% endfor %}
+            </div>
             <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">My second post</a></h2>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+                {{data}}
             </div>
         </body>
     </html>
